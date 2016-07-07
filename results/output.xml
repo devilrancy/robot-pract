@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20160530 01:41:51.466" generator="Robot 3.0 (Python 2.7.10 on win32)">
+<suite source="C:\Users\Naresh\PycharmProjects\test-Demo\test_demo.robot" id="s1" name="Test Demo">
+<test id="s1-t1" name="Test case 1">
+<kw name="Asynchronously Start System 1" library="SystemStarterLibrary">
+<assign>
+<var>${system1}</var>
+</assign>
+<msg timestamp="20160530 01:41:51.524" level="INFO">SYSTEM101</msg>
+<msg timestamp="20160530 01:41:51.524" level="INFO">${system1} = &lt;Thread(Thread-1, started 6952)&gt;</msg>
+<status status="PASS" endtime="20160530 01:41:51.524" starttime="20160530 01:41:51.523"></status>
+</kw>
+<kw name="Asynchronously Start System 2" library="SystemStarterLibrary">
+<assign>
+<var>${system2}</var>
+</assign>
+<msg timestamp="20160530 01:41:51.526" level="INFO">SYSTEM201</msg>
+<msg timestamp="20160530 01:41:51.526" level="INFO">${system2} = &lt;Thread(Thread-2, started 2340)&gt;</msg>
+<status status="PASS" endtime="20160530 01:41:51.526" starttime="20160530 01:41:51.525"></status>
+</kw>
+<kw name="Wait Until" library="SystemStarterLibrary">
+<arguments>
+<arg>${system1}</arg>
+<arg>${system2}</arg>
+</arguments>
+<msg timestamp="20160530 01:41:55.527" level="INFO">SYSTEM102
+SYSTEM202
+SYSTEM103
+SYSTEM203</msg>
+<status status="PASS" endtime="20160530 01:41:55.527" starttime="20160530 01:41:51.527"></status>
+</kw>
+<doc>Example test case 1</doc>
+<status status="PASS" endtime="20160530 01:41:55.529" critical="yes" starttime="20160530 01:41:51.521"></status>
+</test>
+<status status="PASS" endtime="20160530 01:41:55.535" starttime="20160530 01:41:51.470"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Test Demo" pass="1">Test Demo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

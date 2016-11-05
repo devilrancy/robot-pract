@@ -25,4 +25,5 @@ WORKDIR /app
 
 RUN pip install -r requirements.txt
 
-CMD ["python"]
+CMD ["pybot --version"]
+CMD ["pybot test_demo.robot"]
